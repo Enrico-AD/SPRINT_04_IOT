@@ -1,0 +1,69 @@
+# 🏍️🚦 Challenge FIAP – Sprint 4
+
+## Disruptive Architectures: IoT, IOB & Generative IA
+
+### 📖 Descrição
+
+Entrega final da solução funcional, integrada e inovadora, alinhada ao desafio proposto pela **Mottu**.
+O projeto demonstra **domínio técnico**, **integração entre disciplinas** e **clareza na proposta**, apresentando um **fluxo completo de dados** desde a captura via IoT até a **visualização final** em dashboard com usabilidade e indicadores em tempo real.
+
+A solução monitora a **localização** e o **status das motocicletas** nos pátios da Mottu, permitindo o acompanhamento operacional com alertas, indicadores e integração com outras disciplinas (Mobile App, Java, . NET, Banco de Dados e DevOps).
+
+---
+
+### 🎯 Funcionalidades Principais
+
+🔍 Identificação de motocicletas por checkpoint
+📡 Envio de dados em tempo real via HTTP POST
+🖥️ Dashboard interativo (Node-RED Dashboard) com:
+✔️ ID da moto
+✔️ Status (atual: em uso, parada, manutenção etc.)
+✔️ Localização em mapa ou grid
+✔️ Horário da última detecção
+✔️ Alertas e indicadores visuais em tempo real
+🌧️ Detecção de condições climáticas adversas
+🔔 Geração de notificações e insights automáticos (IA Generativa)
+
+---
+
+### 🛠️ Tecnologias e Ferramentas
+
+* **ESP32** (microcontrolador IoT)
+* **Simulador Wokwi** (ambiente de testes virtuais)
+* **Node-RED** (backend de integração e automação de fluxos)
+* **Node-RED Dashboard** (interface de visualização final)
+* **Protocolo HTTP (REST)** para comunicação entre dispositivos
+* **JSON** (formato de dados)
+* **Banco de Dados relacional / API de integração (Java / . NET)**
+* **DevOps (Azure Boards / GitHub)** para gestão e entrega contínua
+
+---
+
+### 🏗️ Arquitetura da Solução
+
+```
++------------+        HTTP POST        +------------+        Visualização
+|   ESP32    |  -------------------->  |  Node-RED  |  -------------------->
+| (Sensor)   |                        | Dashboard  |        (Web UI)
++------------+                        +------------+
+        |                                     |
+        |------> Banco de Dados / API (Java/.NET) ------|
+                         |
+                         +--> Integração com App Mobile / DevOps
+```
+
+---
+
+### 🔌 Requisitos de Execução
+
+✅ Node-RED instalado na máquina ([https://nodered.org/docs/getting-started](https://nodered.org/docs/getting-started))
+✅ Paleta **node-red-dashboard** instalada (`http://xxx.xxx.xx.x:1880/ui`) — atualizar com IP da máquina
+✅ Rede Wi-Fi local (ESP32 físico precisa estar na mesma rede do Node-RED)
+✅ Acesso ao **Wokwi** ([https://wokwi.com](https://wokwi.com)) para simulação do ESP32 (sem integração real com Node-RED)
+
+---
+
+### 🎥 Pitch – Demonstração Final
+
+📺 [Apresentação no YouTube](https://youtu.be/qU4wdBXmzxE)
+
